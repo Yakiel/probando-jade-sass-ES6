@@ -1,0 +1,38 @@
+/*MIXINS*/
+
+//width,height and background
+@mixin w-h-b($w,$h,$bg)
+    width : $w
+    height : $h
+    background : $bg
+
+//Flexbox
+@mixin flexbox($jc,$ai)
+    display : flex
+    align-items : $ai
+    justify-content : $jc
+
+/*
+ Este mixin funciona con una lista
+ la cual se la pasa como parametros al mixin
+ ejemplo:
+ lista : (10px,10px,blue,auto)
+ en si esta hecho para dar alto ancho y centrar elementos 
+ con la propiedad margin.
+ */
+
+@mixin centrado($w,$h,$b,$m)
+	width : $w
+	height : $h
+	background : $b
+	margin :
+		top : $m
+		left : $m
+		right : $m
+		bottom : $m
+		
+@mixin font-family($size,$family)
+    font :
+        size : $size
+        family : $family
+        
